@@ -230,12 +230,12 @@
         padding: 0;
         width: 100%;
         padding-top: 0px !important;
-        margin-top: -50px; /*posición icono menú*/
+        margin-top: -10px; /*posición icono menú*/
     }
     .navigation .navbar-collapse {
         background: #202020;
         padding: 20px;
-        margin-top: 100px;
+        margin-top: 70px;
         position: absolute;
         width: 100%;
         z-index: 999;
@@ -247,6 +247,8 @@
     .navigation.navbar-dark .navbar-toggler {
         border: inherit;
         float: right;
+        position: relative;
+        z-index: 1000;
     }
     /* .navigation.navbar-dark .navbar-toggler-icon {
         background: url(../images/menu_icon.png);
@@ -270,18 +272,23 @@
     }
 
     /*Cruz al abrir el menú*/
-    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-        background-color: white;
+    .navbar-toggler[aria-expanded="true"] .custom-toggler span:nth-child(1) {
+        transform: rotate(45deg) translate(4.5px, 7px);
+        background-color: white !important;
     }
 
-    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(2) {
+    .navbar-toggler[aria-expanded="true"] .custom-toggler span:nth-child(2) {
         opacity: 0; /* desaparece la línea del medio */
     }
 
-    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-        background-color: white;
+    .navbar-toggler[aria-expanded="true"] .custom-toggler span:nth-child(3) {
+        transform: rotate(-45deg) translate(4.5px, -7px);
+        background-color: white !important;
+    }
+
+    /* Líneas negras cuando está cerrado */
+    .navbar-toggler[aria-expanded="false"] .custom-toggler span {
+        background-color: rgb(8, 0, 0);
     }
 
     .d_none {
@@ -395,7 +402,7 @@
     .navigation .navbar-collapse {
         background: #282828;
         padding: 20px;
-        margin-top: 1px;
+        margin-top: 110px;
         position: absolute;
         width: 100%;
         margin-right: 20px;
@@ -408,18 +415,25 @@
     .navigation.navbar-dark .navbar-toggler {
         float: right;
         border: inherit;
-        margin-top: -40px;
+        margin-top: -10px;
+        position: relative;
+        z-index: 1000;
     }
     /* .navigation.navbar-dark .navbar-toggler-icon {
         background: url(../images/menu_icon.png);
         background-repeat: no-repeat;
     } */
+
+    /* Estado cerrado (hamburguesa negra) */
+    .navbar-toggler.collapsed .custom-toggler span {
+        background-color: rgb(8, 0, 0); /* hamburguesa negra */
+    }
      .custom-toggler {
         display: inline-block;
         width: 30px;
         height: 24px;
         position: relative;
-        }
+    }
 
     .custom-toggler span {
         display: block;
@@ -432,18 +446,23 @@
     }
 
     /*Cruz al abrir el menú*/
-    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-        background-color: white;
+    .navbar-toggler[aria-expanded="true"] .custom-toggler span:nth-child(1) {
+        transform: rotate(45deg) translate(4.5px, 7px);
+        background-color: white !important;
     }
 
-    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(2) {
-        opacity: 0; /* desaparece la línea del medio */
+    .navbar-toggler[aria-expanded="true"] .custom-toggler span:nth-child(2) {
+        opacity: 0;
     }
 
-    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-        background-color: white;
+    .navbar-toggler[aria-expanded="true"] .custom-toggler span:nth-child(3) {
+        transform: rotate(-45deg) translate(4.5px, -7px);
+        background-color: white !important;
+    }
+
+    /* Líneas negras cuando está cerrado */
+    .navbar-toggler[aria-expanded="false"] .custom-toggler span {
+        background-color: rgb(8, 0, 0);
     }
     .d_none {
         display: none;
