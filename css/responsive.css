@@ -230,12 +230,12 @@
         padding: 0;
         width: 100%;
         padding-top: 0px !important;
-        margin-top: -31px;
+        margin-top: -50px; /*posición icono menú*/
     }
     .navigation .navbar-collapse {
         background: #202020;
         padding: 20px;
-        margin-top: 73px;
+        margin-top: 100px;
         position: absolute;
         width: 100%;
         z-index: 999;
@@ -248,10 +248,42 @@
         border: inherit;
         float: right;
     }
-    .navigation.navbar-dark .navbar-toggler-icon {
+    /* .navigation.navbar-dark .navbar-toggler-icon {
         background: url(../images/menu_icon.png);
         background-repeat: no-repeat;
+    } */
+     .custom-toggler {
+        display: inline-block;
+        width: 30px;
+        height: 24px;
+        position: relative;
+        }
+
+    .custom-toggler span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: rgb(8, 0, 0); /* color de las líneas */
+        margin: 5px 0;
+        border-radius: 2px;
+        transition: 0.4s; /* animación suave */
     }
+
+    /*Cruz al abrir el menú*/
+    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        background-color: white;
+    }
+
+    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(2) {
+        opacity: 0; /* desaparece la línea del medio */
+    }
+
+    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        background-color: white;
+    }
+
     .d_none {
         display: none;
     }
@@ -376,11 +408,42 @@
     .navigation.navbar-dark .navbar-toggler {
         float: right;
         border: inherit;
-        margin-top: -71px;
+        margin-top: -40px;
     }
-    .navigation.navbar-dark .navbar-toggler-icon {
+    /* .navigation.navbar-dark .navbar-toggler-icon {
         background: url(../images/menu_icon.png);
         background-repeat: no-repeat;
+    } */
+     .custom-toggler {
+        display: inline-block;
+        width: 30px;
+        height: 24px;
+        position: relative;
+        }
+
+    .custom-toggler span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: rgb(8, 0, 0); /* color de las líneas */
+        margin: 5px 0;
+        border-radius: 2px;
+        transition: 0.4s; /* animación suave */
+    }
+
+    /*Cruz al abrir el menú*/
+    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        background-color: white;
+    }
+
+    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(2) {
+        opacity: 0; /* desaparece la línea del medio */
+    }
+
+    .navbar-toggler:not(.collapsed) .custom-toggler span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        background-color: white;
     }
     .d_none {
         display: none;
