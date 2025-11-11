@@ -389,6 +389,16 @@ button {
   letter-spacing: 0.5px;
 }
 
+.top-bar a {
+  color: #fff;              /* Color blanco para los enlaces */
+  text-decoration: none;    
+}
+
+.top-bar a:hover {
+  color: #23c4ec94;           
+  text-decoration: underline; 
+}
+
 /*-- navigation--*/
 
 .navigation.navbar {
@@ -1146,6 +1156,19 @@ button {
 
 /** end contact section **/
 
+/**Cookies y privacidad**/
+
+.Cookies{
+     padding-top: 50px;
+     padding-bottom: 80px;
+}
+
+.Cookies h2,
+.Cookies h3 {
+  margin-top: 30px; /* Espacio antes del título */
+}
+
+/**End Cookies y privacidad**/
 
 /** footer **/
 
