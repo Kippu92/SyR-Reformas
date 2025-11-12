@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>SyR Reformas</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout in_page">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+
+
+      <div class="top-bar">
+         <p><a href="index.html">Inicio</a> · SyR Reformas Alicante · Tel: 655 811 896 · reformasyserviciossyr@gmail.com</p>
+      </div>
+      <!-- end header -->
+
+
+      <!-- Aviso Legal -->
+      <main class="Cookies" aria-labelledby="aviso-legal-title">
+         <div class="container">
+            <h1 id="error-envio-title">Ha ocurrido un error</h1>
+            <p>Lamentamos las molestias, pero no hemos podido enviar su mensaje en este momento.</p>
+            <p>Por favor, inténtelo de nuevo más tarde o contáctenos directamente a través de los siguientes medios:</p>
+            <ul>
+               <li>📧 <a href="mailto:reformasyserviciossyr@gmail.com">reformasyserviciossyr@gmail.com</a></li>
+               <li>📞 <a href="tel:+34655811896">+34 655 811 896</a></li>
+            </ul>
+            <br>
+            <p>Gracias por su comprensión.</p>
+         </div>
+      </main>
+      <!-- end main -->
+
+
+      <!--  footer -->
+      <div id="footer-container">
+         <script>
+         fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+               document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el footer:', error));
+         </script>
+      </div>
+      <!-- end footer -->
+
+
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>

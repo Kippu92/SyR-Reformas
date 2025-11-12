@@ -340,19 +340,20 @@
             </div>
             <div class="row">
                <div class="col-md-6">
-                  <form id="request" class="main_form">
+                  <!-- <form id="request" class="main_form"> -->
+                  <form id="request" class="main_form" action="http://localhost:3000/send-email" method="post">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Nombre" type="type" name="Nombre">
+                           <input class="contactus" placeholder="Nombre" type="type" name="nombre">
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email">
+                           <input class="contactus" placeholder="Email" type="type" name="correo">
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Teléfono" type="type" name="Phone Number">
+                           <input class="contactus" placeholder="Teléfono" type="type" name="telefono">
                         </div>
                         <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Mensaje" type="type" Message="Name">Mensaje</textarea>
+                           <textarea class="textarea" placeholder="Mensaje" type="type" Message="Name" name="comentarios"></textarea>
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn">Enviar</button>
@@ -374,17 +375,45 @@
 
 
       <!--  footer -->
-      <div id="footer-container">
-         <script>
+      <div id="footer-container"></div>
+
+
+      <script>
          fetch('footer.html')
             .then(response => response.text())
             .then(data => {
                document.getElementById('footer-container').innerHTML = data;
             })
             .catch(error => console.error('Error al cargar el footer:', error));
-         </script>
-      </div>
+      </script>
+      
       <!-- end footer -->
+
+
+      <div id="cookie-banner" class="cookie-banner">
+         <p>Usamos cookies para mejorar tu experiencia. 
+            <a href="cookies.html">Más información</a>
+         </p>
+         <button id="accept-cookies">Aceptar</button>
+      </div>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("cookie-banner");
+            const acceptBtn = document.getElementById("accept-cookies");
+
+            // Si ya aceptó, no mostrar banner
+            if (!localStorage.getItem("cookiesAccepted")) {
+               banner.style.display = "flex";
+            }
+
+            acceptBtn.addEventListener("click", function () {
+               localStorage.setItem("cookiesAccepted", "true");
+               banner.style.display = "none";
+            });
+         });
+      </script>
+
 
 
       <!-- Javascript files-->
